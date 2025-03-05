@@ -14,7 +14,10 @@ RUN CHROMEDRIVER_VERSION=114.0.5735.90 && \
     unzip /tmp/chromedriver.zip -d /usr/local/bin/ && \
     chmod +x /usr/local/bin/chromedriver
 
-# Establecer el directorio de trabajo
+# Agregar /usr/local/bin al PATH
+ENV PATH="/usr/local/bin:${PATH}"
+
+# Directorio de trabajo
 WORKDIR /app
 
 # Copiar el código de la aplicación
