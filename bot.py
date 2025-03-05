@@ -19,6 +19,9 @@ def iniciar_whatsapp():
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--user-data-dir=/app/.user_data")  # Persistencia de sesión
 
+    # Especificar la ubicación del binario de Google Chrome
+    chrome_options.binary_location = "/usr/bin/google-chrome"
+
     # Ruta de ChromeDriver en el contenedor Docker
     service = Service(executable_path="/usr/local/bin/chromedriver")
     
